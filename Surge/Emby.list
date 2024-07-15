@@ -14,20 +14,14 @@ DOMAIN-SUFFIX,cf2.jmsooo.com
 #CC
 DOMAIN-SUFFIX,cc.coemn.com
 
-#Misty
-DOMAIN-SUFFIX,misty.cx 
 
 #1111
 DOMAIN-SUFFIX,cf.xmsl.org
 DOMAIN-SUFFIX,cf.emby.moe
   
-
 #peach
 DOMAIN-SUFFIX,peachmv.me
 DOMAIN-SUFFIX,embymv.tk
-
-#Treediagram
-DOMAIN-SUFFIX,123456.al
 
 #pilipili
 DOMAIN-SUFFIX,pilipiliultra.top
@@ -39,6 +33,12 @@ DOMAIN-SUFFIX,embyplus.org
 #叔服
 DOMAIN-SUFFIX,emby3.mcjoker.xyz
 
+#Lyrebird
+DOMAIN-SUFFIX,cdn.lyrebirdemby.com
+
+#探花TV
+DOMAIN-SUFFIX,tanhuatv.site
+
 #卡戎
 DOMAIN-SUFFIX,play.charontv.com 
 
@@ -48,8 +48,14 @@ DOMAIN-SUFFIX,heisi.nekobox.best
 DOMAIN-SUFFIX,h1.i109.com
 DOMAIN-SUFFIX,h2.i109.com
 
+#Misty
+DOMAIN-SUFFIX,misty.cx 
+
 #NME
 DOMAIN-SUFFIX,film.hovervan.org 
 
 #牢大科蜜直升机餐厅
 DOMAIN-SUFFIX,emby-us-v4.mius.uk
+
+#Treediagram
+DOMAIN-SUFFIX,123456.al
