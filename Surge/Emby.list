@@ -1,8 +1,11 @@
 #EMBY
-#守候pre
+#守候
+#PER服
 DOMAIN-SUFFIX,preus.cn2gias.uk
+#普通服
+DOMAIN-SUFFIX,emby.cn2gias.uk
 
-#gugu
+#GUGU
 DOMAIN-SUFFIX,main.gugumedia.site
 
 #ody+
