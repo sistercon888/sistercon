@@ -72,7 +72,7 @@ dns:
   'geosite:gfw,geolocation-!cn': [quic://223.5.5.5, quic://223.6.6.6, https://1.12.12.12/dns-query, https://120.53.53.53/dns-query]
 
 # 策略组引用相关参数
-pg: &pg {type: select, proxies: [手动切换, 香港节点, 美国节点, 狮城节点, 日本节点, 台湾节点, DIRECT]}
+pg: &pg {type: select, proxies: [手动切换, HK, US, SG, JP, TW, DIRECT]}
 # 订阅更新和延迟测试相关参数
 p: &p {type: http, interval: 86400, health-check: {enable: true, url: http://latency-test.skk.moe/endpoint, interval: 1800}}
 # 自动选择策略组：选取延迟最低节点
@@ -99,7 +99,7 @@ proxy-groups:
 
   #分流分组
 
-  - {name: 手动切换, type: select, include-all: true, proxies: [香港节点, 美国节点, 狮城节点, 日本节点, 台湾节点, DIRECT], icon: https://github.com/clash-verge-rev/clash-verge-rev/raw/main/src-tauri/icons/icon.png}
+  - {name: 手动切换, type: select, include-all: true, proxies: [HK, US, SG, 日JP, TW, DIRECT], icon: https://github.com/clash-verge-rev/clash-verge-rev/raw/main/src-tauri/icons/icon.png}
 
   - {name: 国外网站, <<: *pg, icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Global.png}
 
@@ -115,21 +115,21 @@ proxy-groups:
 
   - {name: Emby, <<: *pg, include-all: true, icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Emby.png}
   
-  - {name: 哔哩哔哩, type: select, proxies: [DIRECT, 🇭🇰 香港节点, 🇨🇳 台湾节点], icon: https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/BiliBili.png}
+  - {name: 哔哩哔哩, type: select, proxies: [DIRECT, HK, TW], icon: https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/BiliBili.png}
 
   - {name: 兜底分流, <<: *pg, icon: https://github.com/clash-verge-rev/clash-verge-rev/raw/main/src-tauri/icons/icon.png}
 
   #节点地区分组
 
-  - {name: 香港节点, <<: *url-test, filter: "^(?=.*((?i)🇭🇰|香港|(\b(HK|Hong)\b)))(?!.*((?i)回国|校园|游戏|(\b(GAME)\b))).*$", icon: https://raw.githubusercontent.com/Orz-3/mini/master/Color/HK.png}
+  - {name: HK, <<: *select, filter: "^(?=.*((?i)🇭🇰|香港|(\b(HK|Hong)\b)))(?!.*((?i)回国|校园|游戏|(\b(GAME)\b))).*$", icon: https://raw.githubusercontent.com/Orz-3/mini/master/Color/HK.png}
 
-  - {name: 美国节点, <<: *url-test, filter: "^(?=.*((?i)🇺🇸|美国|波特兰|达拉斯|俄勒冈|凤凰城|费利蒙|硅谷|拉斯维加斯|洛杉矶|圣何塞|圣克拉拉|西雅图|芝加哥|(\b(US|United States)\b)))(?!.*((?i)回国|校园|游戏|(\b(GAME)\b))).*$", icon: https://raw.githubusercontent.com/Orz-3/mini/master/Color/US.png}
+  - {name: US, <<: *select, filter: "^(?=.*((?i)🇺🇸|美国|波特兰|达拉斯|俄勒冈|凤凰城|费利蒙|硅谷|拉斯维加斯|洛杉矶|圣何塞|圣克拉拉|西雅图|芝加哥|(\b(US|United States)\b)))(?!.*((?i)回国|校园|游戏|(\b(GAME)\b))).*$", icon: https://raw.githubusercontent.com/Orz-3/mini/master/Color/US.png}
 
-  - {name: 狮城节点, <<: *url-test, filter: "^(?=.*((?i)🇸🇬|新加坡|狮|(\b(SG|Singapore)\b)))(?!.*((?i)回国|校园|游戏|(\b(GAME)\b))).*$", icon: https://raw.githubusercontent.com/Orz-3/mini/master/Color/SG.png}
+  - {name: SG, <<: *select, filter: "^(?=.*((?i)🇸🇬|新加坡|狮|(\b(SG|Singapore)\b)))(?!.*((?i)回国|校园|游戏|(\b(GAME)\b))).*$", icon: https://raw.githubusercontent.com/Orz-3/mini/master/Color/SG.png}
 
-  - {name: 日本节点, <<: *url-test, filter: "^(?=.*((?i)🇯🇵|日本|川日|东京|大阪|泉日|埼玉|(\b(JP|Japan)\b)))(?!.*((?i)回国|校园|游戏|(\b(GAME)\b))).*$", icon: https://raw.githubusercontent.com/Orz-3/mini/master/Color/JP.png}
+  - {name: JP, <<: *select, filter: "^(?=.*((?i)🇯🇵|日本|川日|东京|大阪|泉日|埼玉|(\b(JP|Japan)\b)))(?!.*((?i)回国|校园|游戏|(\b(GAME)\b))).*$", icon: https://raw.githubusercontent.com/Orz-3/mini/master/Color/JP.png}
 
-  - {name: 台湾节点, <<: *url-test, filter: "(?=.*(台|TW|(?i)Taiwan))^((?!(港|日|韩|新|美)).)*$", icon: https://raw.githubusercontent.com/Orz-3/mini/master/Color/CN.png}
+  - {name: TW, <<: *select, filter: "(?=.*(台|TW|(?i)Taiwan))^((?!(港|日|韩|新|美)).)*$", icon: https://raw.githubusercontent.com/Orz-3/mini/master/Color/CN.png}
                                              
 rule-providers:
 
