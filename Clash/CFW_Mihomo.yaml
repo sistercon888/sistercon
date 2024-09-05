@@ -72,7 +72,7 @@ dns:
   'geosite:gfw,geolocation-!cn': [quic://223.5.5.5, quic://223.6.6.6, https://1.12.12.12/dns-query, https://120.53.53.53/dns-query]
 
 # 策略组引用相关参数
-pg: &pg {type: select, proxies: [手动切换, HK, US, SG, JP, TW, DIRECT]}
+pg: &pg {type: select, proxies: [Main Node, HK, US, SG, JP, TW, DIRECT]}
 # 订阅更新和延迟测试相关参数
 p: &p {type: http, interval: 86400, health-check: {enable: true, url: http://latency-test.skk.moe/endpoint, interval: 1800}}
 # 自动选择策略组：选取延迟最低节点
@@ -99,25 +99,23 @@ proxy-groups:
 
   #分流分组
 
-  - {name: 手动切换, type: select, include-all: true, proxies: [HK, US, SG, JP, TW, DIRECT], icon: https://github.com/clash-verge-rev/clash-verge-rev/raw/main/src-tauri/icons/icon.png}
+  - {name: Main Node, type: select, include-all: true, proxies: [HK, US, SG, JP, TW, DIRECT], icon: https://github.com/clash-verge-rev/clash-verge-rev/raw/main/src-tauri/icons/icon.png}
+  
+  - {name: Telegram, <<: *pg, icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Telegram.png}
+  
+  - {name: Global Media, <<: *pg, icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Area.png}
 
-  - {name: 国外网站, <<: *pg, icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Global.png}
+  - {name: Google, <<: *pg, icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Google_Search.png}
 
-  - {name: 国际媒体, <<: *pg, icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/YouTube.png}
-
-  - {name: 谷歌服务, <<: *pg, icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Google_Search.png}
-
-  - {name: 电报消息, <<: *pg, icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Telegram.png}
-
-  - {name: 推特消息, <<: *pg, icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Twitter.png}
+  - {name: Twitter, <<: *pg, icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Twitter.png}
 
   - {name: AI, <<: *pg, icon: https://raw.githubusercontent.com/Orz-3/mini/master/Color/OpenAI.png}
 
   - {name: Emby, <<: *pg, include-all: true, icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Emby.png}
   
-  - {name: 哔哩哔哩, type: select, proxies: [DIRECT, HK, TW], icon: https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/BiliBili.png}
+  - {name: BiliBili, type: select, proxies: [DIRECT, HK, TW], icon: https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/BiliBili.png}
 
-  - {name: 兜底分流, <<: *pg, icon: https://github.com/clash-verge-rev/clash-verge-rev/raw/main/src-tauri/icons/icon.png}
+  - {name: Final, <<: *pg, icon: https://github.com/clash-verge-rev/clash-verge-rev/raw/main/src-tauri/icons/icon.png}
 
   #节点地区分组
 
@@ -167,20 +165,19 @@ rule-providers:
 rules:
 
   - RULE-SET,AI,AI
-  - RULE-SET,YouTube,谷歌服务
-  - RULE-SET,Google,谷歌服务
-  - RULE-SET,Telegram,电报消息
-  - RULE-SET,Twitter,推特消息
+  - RULE-SET,YouTube,Google
+  - RULE-SET,Google,Google
+  - RULE-SET,Telegram,Telegram
+  - RULE-SET,Twitter,Twitter
   - RULE-SET,Emby,Emby
-  - RULE-SET,Spotify,国际媒体
-  - RULE-SET,Bahamut,国际媒体
-  - RULE-SET,Netflix,国际媒体
-  - RULE-SET,Disney,国际媒体
-  - RULE-SET,PrimeVideo,国际媒体
-  - RULE-SET,HBO,国际媒体
-  - GEOSITE,gfw,国外网站
-  - RULE-SET,BiliBili,哔哩哔哩
+  - RULE-SET,Spotify,Global Media
+  - RULE-SET,Bahamut,Global Media
+  - RULE-SET,Netflix,Global Media
+  - RULE-SET,Disney,Global Media
+  - RULE-SET,PrimeVideo,Global Media
+  - RULE-SET,HBO,Global Media
+  - RULE-SET,BiliBili,BiliBili
   - RULE-SET,China,DIRECT
   - GEOIP,lan,DIRECT
   - GEOIP,CN,DIRECT
-  - MATCH,兜底分流
+  - MATCH,Final
