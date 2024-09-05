@@ -162,7 +162,6 @@ rule-providers:
 rules:
 
   - RULE-SET,AI,AI
-  - RULE-SET,Apple,苹果服务
   - RULE-SET,YouTube,谷歌服务
   - RULE-SET,Google,谷歌服务
   - RULE-SET,Telegram,电报消息
