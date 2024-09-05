@@ -114,6 +114,8 @@ proxy-groups:
   - {name: AI, <<: *pg, icon: https://raw.githubusercontent.com/Orz-3/mini/master/Color/OpenAI.png}
 
   - {name: Emby, <<: *pg, include-all: true, icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Emby.png}
+  
+  - {name: 哔哩哔哩, type: select, proxies: [DIRECT, 🇭🇰 香港节点, 🇨🇳 台湾节点], icon: https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/BiliBili.png}
 
   - {name: 兜底分流, <<: *pg, icon: https://github.com/clash-verge-rev/clash-verge-rev/raw/main/src-tauri/icons/icon.png}
 
@@ -127,7 +129,7 @@ proxy-groups:
 
   - {name: 日本节点, <<: *url-test, filter: "^(?=.*((?i)🇯🇵|日本|川日|东京|大阪|泉日|埼玉|(\b(JP|Japan)\b)))(?!.*((?i)回国|校园|游戏|(\b(GAME)\b))).*$", icon: https://raw.githubusercontent.com/Orz-3/mini/master/Color/JP.png}
 
-  - {name: 台湾节点, <<: *url-test, filter: "(?i)🇹🇼|台|台湾|(\b(TW|Tai|Taiwan)\b)", icon: https://raw.githubusercontent.com/Orz-3/mini/master/Color/CN.png}
+  - {name: 台湾节点, <<: *url-test, filter: "(?=.*(台|TW|(?i)Taiwan))^((?!(港|日|韩|新|美)).)*$", icon: https://raw.githubusercontent.com/Orz-3/mini/master/Color/CN.png}
                                              
 rule-providers:
 
@@ -135,7 +137,10 @@ rule-providers:
   # 谷歌服务
   YouTube: {<<: *c, path: ./rule-providers/YouTube.list,  url: https://github.com/Repcz/Tool/raw/X/Clash/Rules/YouTube.list}
   Google: {<<: *c, path: ./rule-providers/Google.list,  url: https://github.com/Repcz/Tool/raw/X/Clash/Rules/Google.list}
-
+  
+  # 哔哩哔哩
+  BiliBili: {<<: *c, format: text, path: ./rule-providers/BiliBili.list,  url: https://git.988896.xyz/https://github.com/Repcz/Tool/raw/X/Clash/Rules/Bilibili.list}
+ 
   # 电报消息
   Telegram: {<<: *c, path: ./rule-providers/Telegram.list,  url: https://github.com/Repcz/Tool/raw/X/Clash/Rules/Telegram.list}
 
@@ -174,6 +179,7 @@ rules:
   - RULE-SET,PrimeVideo,国际媒体
   - RULE-SET,HBO,国际媒体
   - GEOSITE,gfw,国外网站
+  - RULE-SET,BiliBili,哔哩哔哩
   - RULE-SET,China,DIRECT
   - GEOIP,lan,DIRECT
   - GEOIP,CN,DIRECT
