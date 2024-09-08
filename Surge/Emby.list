@@ -15,7 +15,7 @@ DOMAIN-SUFFIX,odysseyplus.site
 DOMAIN-SUFFIX,magpie.cyou
 
 #jms
-DOMAIN-SUFFIX,cf2.jmsooo.com
+DOMAIN-SUFFIX,cf2.jmsuper.com
 
 #CC
 DOMAIN-SUFFIX,cc.coemn.com
@@ -29,8 +29,7 @@ DOMAIN-SUFFIX,cf.emby.moe
 DOMAIN-SUFFIX,embymv.link
 
 #pilipili
-DOMAIN-SUFFIX,pilipiliultra.top
-DOMAIN-SUFFIX,pilipiliultra.com
+DOMAIN-SUFFIX,pilipili.club
 
 #纸片人
 DOMAIN-SUFFIX,embyplus.org
@@ -46,6 +45,9 @@ DOMAIN-SUFFIX,tanhuatv.site
 
 #卡戎
 DOMAIN-SUFFIX,play.charontv.com 
+
+#MisakaF
+DOMAIN-SUFFIX,emby.aca.best
 
 #Heisi
 DOMAIN-SUFFIX,i109.com
