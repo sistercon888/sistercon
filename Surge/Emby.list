@@ -17,6 +17,11 @@ DOMAIN-SUFFIX,magpie.cyou
 #jms
 DOMAIN-SUFFIX,cf2.jmsuper.com
 
+#ZDZ
+DOMAIN-SUFFIX,pub1.emby.wtf
+DOMAIN-SUFFIX,pub2.emby.wtf
+DOMAIN-SUFFIX,pub3.emby.wtf
+
 #CC
 DOMAIN-SUFFIX,cc.coemn.com
 
