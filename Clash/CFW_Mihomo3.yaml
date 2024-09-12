@@ -115,7 +115,7 @@ proxy-groups:
   
   - {name: BiliBili, type: select, proxies: [DIRECT, HK, TW], icon: https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/BiliBili.png}
 
-  - {name: Final, <<: *pg, icon: https://github.com/clash-verge-rev/clash-verge-rev/raw/main/src-tauri/icons/icon.png}
+  - {name: Final, <<: *pg, icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Final.png}
 
   #节点地区分组
 
