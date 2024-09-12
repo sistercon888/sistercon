@@ -141,7 +141,7 @@ function main(config) {
     {
       ...groupBaseOption,
       "name": "HK",
-      "type": "url-test",
+      "type": "select",
       "tolerance": 0,
       "include-all": true,
       "filter": "(?i)🇭🇰|香港|(\b(HK|Hong)\b)",
@@ -150,7 +150,7 @@ function main(config) {
     {
       ...groupBaseOption,
       "name": "US",
-      "type": "url-test",
+      "type": "select",
       "tolerance": 0,
       "include-all": true,
       "filter": "(?i)🇺🇸|美国|洛杉矶|圣何塞|(\b(US|United States)\b)",
@@ -159,7 +159,7 @@ function main(config) {
     {
       ...groupBaseOption,
       "name": "SG",
-      "type": "url-test",
+      "type": "select",
       "tolerance": 0,
       "include-all": true,
       "filter": "(?i)🇸🇬|新加坡|狮|(\b(SG|Singapore)\b)",
@@ -168,7 +168,7 @@ function main(config) {
     {
       ...groupBaseOption,
       "name": "JP",
-      "type": "url-test",
+      "type": "select",
       "tolerance": 0,
       "include-all": true,
       "filter": "(?i)🇯🇵|日本|东京|(\b(JP|Japan)\b)",
@@ -177,7 +177,7 @@ function main(config) {
     {
       ...groupBaseOption,
       "name": "TW",
-      "type": "url-test",
+      "type": "select",
       "tolerance": 0,
       "include-all": true,
       "filter": "(?i)🇨🇳|🇹🇼|台湾|(\b(TW|Tai|Taiwan)\b)",
