@@ -108,6 +108,13 @@ function main(config) {
       "proxies": ["Main Node", "HK", "US", "SG", "JP", "TW"],
       "icon": "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Area.png"
     },
+     {
+      ...groupBaseOption,
+      "name": "Bahamut",
+      "type": "select",
+      "proxies": ["Main Node", "HK", "US", "SG", "JP", "TW"],
+      "icon": "https://raw.githubusercontent.com/lige47/QuanX-icon-rule/main/icon/bahamute.png"
+    },
     {
       ...groupBaseOption,
       "name": "Google",
@@ -281,7 +288,7 @@ function main(config) {
     "RULE-SET,Telegram,Telegram",
     "RULE-SET,Emby,Emby",
     "RULE-SET,Spotify,Global Media",
-    "RULE-SET,Bahamut,Global Media",
+    "RULE-SET,Bahamut,Bahamut",
     "RULE-SET,Netflix,Global Media",
     "RULE-SET,Disney,Global Media",
     "RULE-SET,PrimeVideo,Global Media",
