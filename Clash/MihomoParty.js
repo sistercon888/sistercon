@@ -182,15 +182,6 @@ function main(config) {
       "include-all": true,
       "filter": "(?i)🇨🇳|🇹🇼|台湾|(\b(TW|Tai|Taiwan)\b)",
       "icon": "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/China.png"
-    },
-      {
-      ...groupBaseOption,
-      "name": "LM",
-      "type": "url-test",
-      "tolerance": 0,
-      "include-all": true,
-      "filter": "(^(?!.*(套餐|订阅|剩余|到期|🇭🇰|香港|HK|Hong|🇨🇳|台湾|TW|Taiwan|🇸🇬|新加坡|狮|獅|SG|Sin|Singapore|🇯🇵|日本|JP|Japan|🇺🇸|美国|US|USA|States|American|🇰🇵|朝|KP|🇰🇷|韩国|韓|KR|Korea)).*)",
-      "icon": "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Europe_Map.png"
     }
   ];
 
