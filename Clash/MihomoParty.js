@@ -96,17 +96,17 @@ function main(config) {
     },
     {
       ...groupBaseOption,
-      "name": "Global Media",
-      "type": "select",
-      "proxies": ["Main Node", "HK", "US", "SG", "JP", "TW"],
-      "icon": "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Area.png"
-    },
-    {
-      ...groupBaseOption,
       "name": "Telegram",
       "type": "select",
       "proxies": ["Main Node", "HK", "US", "SG", "JP", "TW"],
       "icon": "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Telegram.png"
+    },
+    {
+      ...groupBaseOption,
+      "name": "Global Media",
+      "type": "select",
+      "proxies": ["Main Node", "HK", "US", "SG", "JP", "TW"],
+      "icon": "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Area.png"
     },
     {
       ...groupBaseOption,
