@@ -72,7 +72,7 @@ dns:
   'geosite:gfw,geolocation-!cn': [quic://223.5.5.5, quic://223.6.6.6, https://1.12.12.12/dns-query, https://120.53.53.53/dns-query]
 
 # 策略组引用相关参数
-pg: &pg {type: select, proxies: [Main Node, HK, US, SG, JP, TW, DIRECT]}
+pg: &pg {type: select, proxies: [Main Node, HK, US, SG, JP, TW]}
 # 订阅更新和延迟测试相关参数
 p: &p {type: http, interval: 86400, health-check: {enable: true, url: http://latency-test.skk.moe/endpoint, interval: 1800}}
 # 自动选择策略组：选取延迟最低节点
@@ -99,7 +99,7 @@ proxy-groups:
 
   #分流分组
 
-  - {name: Main Node, type: select, include-all: true, proxies: [HK, US, SG, JP, TW, LM, DIRECT], icon: https://github.com/clash-verge-rev/clash-verge-rev/raw/main/src-tauri/icons/icon.png}
+  - {name: Main Node, type: select, include-all: true, proxies: [HK, US, SG, JP, TW, LM], icon: https://github.com/clash-verge-rev/clash-verge-rev/raw/main/src-tauri/icons/icon.png}
   
   - {name: Telegram, <<: *pg, icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Telegram.png}
   
