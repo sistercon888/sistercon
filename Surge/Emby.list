@@ -1,9 +1,9 @@
 #EMBY
 
-#守候
-#PER服
+#守候pre服
 DOMAIN-SUFFIX,pe.cn2gias.uk
-#普通服
+
+#守候普通服
 DOMAIN-SUFFIX,emby.cn2gias.uk
 
 #GUGU
