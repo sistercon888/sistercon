@@ -106,6 +106,7 @@ Copy URL MD5
 Copy URL MD5
 订阅名称 : {<<: *p, path: ./proxy-providers/订阅名称.yaml, url: 订阅链接   
 
+
 proxy-groups:
 
   #分流分组
