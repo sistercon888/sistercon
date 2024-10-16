@@ -119,13 +119,13 @@ proxy-groups:
 
   #节点地区分组
 
-  - {name: HK, <<: *select, filter: "^(?=.*((?i)🇭🇰|香港|(\b(HK|Hong)\b)))(?!.*((?i)回国|校园|游戏|(\b(GAME)\b))).*$", icon: https://raw.githubusercontent.com/Orz-3/mini/master/Color/HK.png}
+  - {name: HK, <<: *select, filter: "^(?=.*((?i)🇭🇰|香港|港|(\b(HK|Hong)\b)))(?!.*((?i)回国|校园|游戏|(\b(GAME)\b))).*$", icon: https://raw.githubusercontent.com/Orz-3/mini/master/Color/HK.png}
 
-  - {name: US, <<: *select, filter: "^(?=.*((?i)🇺🇸|美国|波特兰|达拉斯|俄勒冈|凤凰城|费利蒙|硅谷|拉斯维加斯|洛杉矶|圣何塞|圣克拉拉|西雅图|芝加哥|(\b(US|United States)\b)))(?!.*((?i)回国|校园|游戏|(\b(GAME)\b))).*$", icon: https://raw.githubusercontent.com/Orz-3/mini/master/Color/US.png}
+  - {name: US, <<: *select, filter: "^(?=.*((?i)🇺🇸|美国|波特兰|达拉斯|俄勒冈|凤凰城|费利蒙|硅谷|拉斯维加斯|洛杉矶|圣何塞|圣克拉拉|西雅图|芝加哥|美|(\b(US|United States)\b)))(?!.*((?i)回国|校园|游戏|(\b(GAME)\b))).*$", icon: https://raw.githubusercontent.com/Orz-3/mini/master/Color/US.png}
 
-  - {name: SG, <<: *select, filter: "^(?=.*((?i)🇸🇬|新加坡|狮|(\b(SG|Singapore)\b)))(?!.*((?i)回国|校园|游戏|(\b(GAME)\b))).*$", icon: https://raw.githubusercontent.com/Orz-3/mini/master/Color/SG.png}
+  - {name: SG, <<: *select, filter: "^(?=.*((?i)🇸🇬|新加坡|狮|新|(\b(SG|Singapore)\b)))(?!.*((?i)回国|校园|游戏|(\b(GAME)\b))).*$", icon: https://raw.githubusercontent.com/Orz-3/mini/master/Color/SG.png}
 
-  - {name: JP, <<: *select, filter: "^(?=.*((?i)🇯🇵|日本|川日|东京|大阪|泉日|埼玉|(\b(JP|Japan)\b)))(?!.*((?i)回国|校园|游戏|(\b(GAME)\b))).*$", icon: https://raw.githubusercontent.com/Orz-3/mini/master/Color/JP.png}
+  - {name: JP, <<: *select, filter: "^(?=.*((?i)🇯🇵|日本|川日|东京|大阪|泉日|埼玉|日|(\b(JP|Japan)\b)))(?!.*((?i)回国|校园|游戏|(\b(GAME)\b))).*$", icon: https://raw.githubusercontent.com/Orz-3/mini/master/Color/JP.png}
 
   - {name: TW, <<: *select, filter: "(?=.*(台|TW|(?i)Taiwan))^((?!(港|日|韩|新|美)).)*$", icon: https://raw.githubusercontent.com/Orz-3/mini/master/Color/CN.png}
 
